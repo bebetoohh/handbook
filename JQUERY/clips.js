@@ -87,6 +87,43 @@ $('input.nospace').keydown(function(e){
 })
 
 
+// 返回顶部
+// Back to top
+$('a.top').click(function(e){
+	e.preventDefault();
+	$(document.body).animate({scrollTop:0},800);
+});
+//Useage:
+//HTML中得有一个按钮
+//<!-- Creat an anchor tag -->
+//<a class="tag" href="#">Back to top</a>
+//可以改变scrollTop的值来定位滚动条的位置
+
+
+
+
+//图片预加载
+//如果页面使用了很多不是最初加载便可见的图片，有必要进行预加载
+$.preloadImages = function(){
+	for(var i=0 ; i<arguments.length; i++){
+		$('img').attr('src',arguments[i]);
+	}
+};
+$.preloadImages('img/hover-on.png','img/hover-off.png');
+
+
+
+//让两个div等高
+//有时，需要让两个DIV保持等高，而不管两个DIV的内容如何
+$('.div') .css('min-height',$(.main-div).height);
+var $columns = $('.column');
+var height = 0;
+$columns.each(function(){
+	if($(this).height()>height){
+		height = $(this).height();
+	}
+});
+$columns.height(height);
 
 
 

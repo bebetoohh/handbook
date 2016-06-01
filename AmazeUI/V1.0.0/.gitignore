@@ -1,0 +1,30 @@
+# system
+.DS_Store
+
+# editor
+.idea
+
+# node.js
+npm-debug.log
+node_modules/
+
+# bower
+.bower-cache
+.bower-registry
+
+# vendor
+vendor/codemirror-emmet
+vendor/less.js/
+
+# tools
+tools/app/public/style.css
+
+# build
+.build
+# dist/css
+# dist/js
+less/amazeui.widgets.less
+
+# zip tmp files
+docs/examples/assets/css/amazeui*.css
+docs/examples/assets/js/amazeui*.js
